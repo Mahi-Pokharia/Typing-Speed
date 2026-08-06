@@ -5,10 +5,71 @@ HTML
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typing Speed Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="container">
+    <h1>Typing Speed Test</h1>
 
-  <!-- Your UI content will go inside here -->
+    <!-- 1. Top Configuration Bar -->
+    <section class="config-bar">
+      <div class="toggle-group">
+        <button id="btn-punct" class="config-btn" onclick="togglePunctuation()">@ punctuation</button>
+        <button id="btn-num" class="config-btn" onclick="toggleNumbers()"># numbers</button>
+      </div>
+      
+      <div class="divider">|</div>
+
+      <div class="time-group">
+        <button class="time-btn active" onclick="setTime(30)">30s</button>
+        <button class="time-btn" onclick="setTime(60)">60s</button>
+        <button class="time-btn" onclick="setTime(120)">120s</button>
+        <button class="time-btn" onclick="setTime(180)">180s</button>
+        <button class="time-btn" onclick="setTime(240)">240s</button>
+      </div>
+    </section>
+
+    <!-- 2. Typing Zone -->
+    <section id="typing-zone">
+      <div id="timer-display">30</div>
+      
+      <!-- Text Display Box -->
+      <div id="prompt-box" class="prompt-box">
+        <!-- Target text dynamically injected by JS -->
+      </div>
+
+      <!-- Hidden or styled input field -->
+      <input type="text" id="type-input" autocomplete="off" placeholder="Start typing here..." autofocus>
+    </section>
+
+    <!-- 3. Results Dashboard (Hidden until test finishes) -->
+    <section id="results-screen" class="hidden">
+      <div class="metrics-summary">
+        <div class="metric">
+          <span class="label">WPM</span>
+          <span id="res-wpm" class="value">0</span>
+        </div>
+        <div class="metric">
+          <span class="label">Accuracy</span>
+          <span id="res-accuracy" class="value">0%</span>
+        </div>
+        <div class="metric">
+          <span class="label">Consistency</span>
+          <span id="res-consistency" class="value">0%</span>
+        </div>
+      </div>
+
+      <!-- Graph Container -->
+      <div class="chart-container">
+        <canvas id="wpmChart"></canvas>
+      </div>
+
+      <button id="restart-btn" onclick="resetTest()">Restart Test</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
