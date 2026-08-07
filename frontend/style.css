@@ -6,6 +6,7 @@ body {
   padding: 20px;
 }
 
+/* -------- CONFIG BAR -------- */
 .config-bar {
   margin-bottom: 20px;
 }
@@ -35,12 +36,35 @@ body {
   margin-bottom: 10px;
 }
 
+/* -------- PROMPT BOX -------- */
+.prompt-box {
+  background-color: #333;
+  padding: 15px;
+  margin: 10px auto;
+  width: 70%;
+  min-height: 100px;
+  text-align: left;
+}
+
 /* -------- INPUT BOX -------- */
 #type-input {
   width: 70%;
   padding: 10px;
   margin-top: 10px;
   border: none;
+}
+
+/* -------- RESULTS -------- */
+.hidden {
+  display: none;
+}
+
+.metrics-summary {
+  margin-top: 20px;
+}
+
+.metric {
+  margin: 10px;
 }
 
 .value {
