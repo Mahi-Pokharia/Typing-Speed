@@ -1,5 +1,5 @@
 body {
-  background-color: #1e1e2f;
+  background-color: #2766a6;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -7,9 +7,8 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 800px;
-  padding: 2rem;
+  width: 100%;
+  padding: 1rem;
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
