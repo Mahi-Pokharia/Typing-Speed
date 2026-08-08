@@ -6,10 +6,33 @@ body {
   padding: 20px;
 }
 
+.container {
+  width: 90%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
 /* -------- CONFIG BAR -------- */
 .config-bar {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
 }
+
 
 .config-btn,
 .time-btn {
